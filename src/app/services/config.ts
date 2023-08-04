@@ -1,0 +1,1 @@
+export let urlApi = "https://www.thecocktaildb.com/";

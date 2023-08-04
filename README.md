@@ -25,3 +25,20 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## For the API use this endpoind https://www.thecocktaildb.com/
+
+
+Do
+    frontend
+    * mostrar todo el catalogo de cocteles
+    * al ingresar al coctel mostrar ingredientes del coctel (decriocion imagen)
+    * debe permitir seleccionar un ingrediene para actualizar la vista del coctel y mostrar los
+        cocteles basados en ese ingrediente
+    * mostrar cocteles segun la base inicial de su nombre
+    backend
+    
+Doing
+
+Does
