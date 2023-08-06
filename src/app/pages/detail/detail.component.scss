@@ -38,10 +38,6 @@
     border-radius: 47% 0px 0px 50px;
 }
 
-/* .form-check-input:checked[type=radio]::before {
-    background-color: red;
-} */
-
 label:has(.form-check-input:checked[type=radio]) {
     background-color: $info-dark;
 }

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CocktailsService } from '../../services/cocktails.service';
-import { CockteilDataModel, CockteilsDataModel, CockteilsModel, CockteilsIngredientsModel, CockteilsIngredientsDataModel, CockteilDetailDataModel } from '../../interfaces/cockteils-model'
+import { CockteilsModel, CockteilDetailDataModel } from '../../interfaces/cockteils-model'
 import { AppComponent } from '../../app.component';
-import { urlApiIngredientesImages, languages }  from '../../services/config';
+import { urlApiIngredientesImages, languages } from '../../services/config';
 import { HelperService } from '../../services/helper.service';
 
 @Component({
@@ -16,10 +16,10 @@ export class DetailComponent implements OnInit {
   public filter: string | null = '';
   public cocktailDetail: CockteilsModel | any = null
   public cocktailIngredientes: any[] = []//CockteilsIngredientsModel[] | 
-  public instructions:any[] = []
-  public language:string = 'EN'
-  public languages:string[]= languages;
-  public instructionsNote:string = '';
+  public instructions: any[] = []
+  public language: string = 'EN'
+  public languages: string[] = languages;
+  public instructionsNote: string = '';
 
   constructor(
     public activatedroute: ActivatedRoute,
@@ -35,6 +35,11 @@ export class DetailComponent implements OnInit {
     this.getDetailCocktailById();
   }
 
+  /**
+   * get cocktail by id 
+   * @CockteilDetailDataModel
+   * @CockteilDetailModel
+   */
   getDetailCocktailById() {
 
     if (this.filter) {
@@ -60,14 +65,18 @@ export class DetailComponent implements OnInit {
     }
   }
 
-  makeIngredinents(){
+  /**
+   * set fix for order data for show detail from model cocktial geteed
+   * @CockteilsModel
+   */
+  makeIngredinents() {
 
     let cocktailIngredientes = []
     for (let index = 1; index <= 15; index++) {
       let strIngredient = this.cocktailDetail['strIngredient' + index];
       let strMeasure = this.cocktailDetail['strMeasure' + index];
-      
-      if(strIngredient){
+
+      if (strIngredient) {
         cocktailIngredientes.push({
           "strMeasure": strMeasure,
           "strDrink": strIngredient,
@@ -75,7 +84,7 @@ export class DetailComponent implements OnInit {
         });
 
       }
-      
+
     }
 
     this.cocktailIngredientes = this.helperService.split(cocktailIngredientes, 6);
@@ -83,28 +92,32 @@ export class DetailComponent implements OnInit {
     console.log("cocktailIngredientes", cocktailIngredientes)
   }
 
-  makeInstructions(){
+  /**
+   * get array from model cocktail for make data of  form dynamic
+   * @returns null 
+   */
+  makeInstructions() {
     this.instructions = []
 
-    if(this.cocktailDetail?.strInstructions){
+    if (this.cocktailDetail?.strInstructions) {
 
-      let strInstructions:any[] = this.getInstructionsBylanguage(this.language);
+      let strInstructions: any[] = this.getInstructionsBylanguage(this.language);
 
-      if(strInstructions.length == 0){
+      if (strInstructions.length == 0) {
         return
       }
 
-      let index = strInstructions.findIndex(el=> el.includes('Note:') || el.includes('NOTE:'));
+      let index = strInstructions.findIndex(el => el.includes('Note:') || el.includes('NOTE:'));
 
       console.log("index", index)
 
-      if(index !==-1){
+      if (index !== -1) {
         this.instructionsNote = strInstructions[index]
         strInstructions.splice(index, 1)
       }
 
-      strInstructions.map(el=>{
-        if(el){
+      strInstructions.forEach(el => {
+        if (el) {
           this.instructions.push(el)
         }
       })
@@ -112,47 +125,28 @@ export class DetailComponent implements OnInit {
     }
   }
 
-  /* if(this.cocktailDetail.idDrink){
-
-    //obtener los ingredientes
-    this.cocktailsService.getIngredinetsById(this.cocktailDetail.idDrink)
-      .subscribe((cocktailDataDetail: CockteilsIngredientsDataModel) => {
-        console.log("getDetailCocktailById - getIngredinetsById", cocktailDataDetail);
-        this.cocktailIngredientes = cocktailDataDetail.ingredients
-
-      }, (errorgetIngredinetsById) => {
-        console.log("getDetailCocktailById - errorgetIngredinetsById", errorgetIngredinetsById);
-        let msg = ''
-
-        this.appComponent.presentAlertOptions("Error", "obteniendo datos", msg, null, null, {});
-      })
-    
-  } */
-
-  choose(event:any){
-
-    /* 
-    strInstructionsES
-    strInstructionsDE
-    strInstructionsFR
-    strInstructionsIT
-    strInstructionsZH-HANS
-    strInstructionsZH-HANT */
-    console.log("choose(event ", event)
-    console.log("choose - language", this.language);
-
+  /**
+   * is for deploy filter of languajes for show makeInstructions 
+   * @param event 
+   */
+  choose(event: any) {
     this.makeInstructions()
   }
 
-  getInstructionsBylanguage(currentlanguage:string){
+  /**
+   * for show correct instructions for the selection of languaje
+   * @param currentlanguage 'EN', 'ES',   'DE',    'FR',    'IT'
+   * @returns 
+   */
+  getInstructionsBylanguage(currentlanguage: string) {
 
-    if(this.cocktailDetail.length == 0){
+    if (this.cocktailDetail.length == 0) {
       return []
     }
 
-    let strInstructions:any[] = []
+    let strInstructions: any[] = []
 
-    if(currentlanguage == 'EN'){
+    if (currentlanguage == 'EN') {
       currentlanguage = ''
     }
 

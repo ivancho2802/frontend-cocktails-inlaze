@@ -7,7 +7,7 @@
       <div class="grid">
         <div class="row">
           <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
-            <h3>{{cocktailDetail?.strDrink}}</h3><!--  # {{cocktailDetail?.idDrink}} -->
+            <h3>{{cocktailDetail?.strDrink}}</h3>
             <div class=" inlaze-item-big bg-greecake p-2">
               <img [src]="cocktailDetail?.strDrinkThumb" [alt]="cocktailDetail?.strDrink" width="300" height="300" />
             </div>
@@ -19,15 +19,6 @@
 
             <div *ngIf="cocktailIngredientes.length !== 0" id="carouselExampleDark"
               class="carousel carousel-dark slide bg-info bg-infodetails ">
-
-              <!-- <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-                  aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                  aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                  aria-label="Slide 3"></button>
-              </div> -->
 
               <div class="carousel-inner">
 
