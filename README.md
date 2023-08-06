@@ -33,16 +33,28 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 Use el id 11410 existente como data dummy y mostrar el producto mas popular en el home
 
+## Para el diseño use bootstrap "bootstrap": "5.2.0",
+
+https://getbootstrap.com/docs/5.0/helpers/colored-links/
+
+## Para el diseño i algunos iconos use "bootstrap-icons": "^1.10.5",
+
+https://icons.getbootstrap.com/icons/search/
+
+## Para mostrar al susuario mensaje de operaciones exitos o errores otifico con sweetalert2
+
+https://sweetalert2.github.io/
+
 
 Do
     frontend
-    * mostrar todo el catalogo de cocteles
-    * al ingresar al coctel mostrar ingredientes del coctel (decriocion imagen)
-    * debe permitir seleccionar un ingrediene para actualizar la vista del coctel y mostrar los
-        cocteles basados en ese ingrediente
-    * mostrar cocteles segun la base inicial de su nombre
     backend
 
 Doing
 
 Does
+    * al ingresar al coctel mostrar ingredientes del coctel (decriocion imagen)
+    * mostrar todo el catalogo de cocteles
+    * mostrar cocteles segun la base inicial de su nombre
+    * debe permitir seleccionar un ingrediene para actualizar la vista del coctel y mostrar los
+        cocteles basados en ese ingrediente
