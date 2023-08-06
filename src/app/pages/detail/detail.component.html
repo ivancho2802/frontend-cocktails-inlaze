@@ -1,0 +1,146 @@
+<div>
+  <div class="content">
+    <app-header></app-header>
+
+    <section id="Ingredientes" class="py-5">
+
+      <div class="grid">
+        <div class="row">
+          <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
+            <h3>{{cocktailDetail?.strDrink}}</h3><!--  # {{cocktailDetail?.idDrink}} -->
+            <div class=" inlaze-item-big bg-greecake p-2">
+              <img [src]="cocktailDetail?.strDrinkThumb" [alt]="cocktailDetail?.strDrink" width="300" height="300" />
+            </div>
+          </div>
+          <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
+            <h4>Ingredientes</h4>
+
+            <p *ngIf="cocktailIngredientes.length == 0">No hay ingredientes</p>
+
+            <div *ngIf="cocktailIngredientes.length !== 0" id="carouselExampleDark"
+              class="carousel carousel-dark slide bg-info bg-infodetails ">
+
+              <!-- <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+              </div> -->
+
+              <div class="carousel-inner">
+
+                <div data-bs-interval="2000" *ngFor="let ingredientes of cocktailIngredientes; let i = index"
+                  [class]="'carousel-item ' + (i == 0 ? 'active': '') ">
+                  <div class="grid">
+
+                    <div class="row">
+                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"
+                        *ngFor="let ingredient of ingredientes; let j = index">
+                        <div class=" m-4 text-center">
+                          <div class=" d-flex justify-content-center">
+                            <div class="p-2 bd-highlight"></div>
+                            <div [class]="
+                              ((j == 0 || j == 3 || j == 6) ? 'bg-pinkcake': (
+                                (j == 1 || j == 4 || j == 7 ? 'bg-greecake': 'bg-veiscake')
+                              )) +
+                              ' p-1 inlaze-item '">
+                              <img [src]="ingredient.strDrinkThumb" [alt]="ingredient.strDrink" width="100"
+                                height="100" />
+                            </div>
+                            <div class="p-2 bd-highlight"></div>
+                          </div>
+                          <span>{{ingredient.strMeasure}} {{ingredient.strDrink}}</span>
+
+                          <div>
+                            <a [routerLink]="['/home/filter', {'i': ingredient.strDrink}]" class="btn btn-light  btn-sm">
+                              show others with this
+                            </a>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row mt-3">
+
+          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"></div>
+
+          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+
+            <button class=" carousel-control-prev carousel-custom-btn carousel-custom-next" type="button"
+              data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="badge rounded-pill bg-info-dark ">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              </span>
+              <span class="text-dark">Previous recipe</span>
+            </button>
+
+            <button class="carousel-control-next carousel-custom-btn carousel-custom-prev" type="button"
+              data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <span class="text-dark">Next recipe</span>
+              <span class="badge rounded-pill bg-info-dark ">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              </span>
+            </button>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12"></div>
+        </div>
+
+      </div>
+
+
+    </section>
+
+    <section id="Instrucciones" class="py-5">
+      <div class="grid">
+        <div class="row">
+          <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12">
+            <h4>Instrucciones</h4>
+
+            <ol>
+              <li *ngFor="let instruction of instructions">{{instruction}} </li>
+            </ol>
+
+            <ul>
+              <li>{{instructionsNote}} </li>
+            </ul>
+
+          </div>
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
+
+            <div class="row">
+              <div *ngFor="let choice of languages" class="col col-xl-12 col-lg-12 col-sm-auto col-md-auto ">
+
+                <label class="btn-rounded p-2 ">
+                  <img [src]="'../../../assets/languajes/' + choice + '.png'" alt="Languages" width="45" height="45" />
+                  <input type="radio" class="form-check-input d-none" id="{{ 'groupName' + choice }}"
+                    name="{{'groupName'}}" [value]="choice" [(ngModel)]="language" (ngModelChange)="choose($event)" />
+                </label>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <app-footer></app-footer>
+
+</div>

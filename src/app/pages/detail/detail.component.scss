@@ -1,0 +1,47 @@
+@import "../../../theme/variables.scss";
+
+.inlaze-item-big {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+
+    img {
+
+        border-radius: 50%;
+    }
+}
+
+.inlaze-item {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+
+    img {
+
+        border-radius: 50%;
+    }
+}
+
+.carousel-custom-btn {
+    position: relative;
+}
+
+.carousel-custom-next {
+    float: left;
+}
+
+.carousel-custom-prev {
+    float: right;
+}
+
+.bg-infodetails {
+    border-radius: 47% 0px 0px 50px;
+}
+
+/* .form-check-input:checked[type=radio]::before {
+    background-color: red;
+} */
+
+label:has(.form-check-input:checked[type=radio]) {
+    background-color: $info-dark;
+}
