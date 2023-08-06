@@ -1,0 +1,20 @@
+
+$primary: #574747;
+$secondary: #475852;
+$lightbackground: #EFECE5;
+$info: #A1DBC3;
+$info-dark: #5CA3A7;
+$pinkcake: #DFBFD7;
+$greecake: #C6DBA2;
+$veiscake: #DBB7A1;
+
+/* .custom-element {
+    color: $gray-100;
+    background-color: $dark;
+} */
+
+:root {
+    --bs-blue: $primary;
+    --bs-primary: $primary;
+    --bs-secondary: $secondary;
+}

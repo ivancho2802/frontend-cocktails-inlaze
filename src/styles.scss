@@ -1,1 +1,78 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/_variables";
+@import "./theme/variables.scss";
+@import "~bootstrap/scss/_maps"; // **Newly added!**
+@import "~bootstrap/scss/_functions";
+@import "~bootstrap/scss/_mixins";
+@import "~bootstrap/scss/_utilities";
+@import "~bootstrap/scss/_helpers";
+@import "~bootstrap/scss/utilities/_api";
+@import "~bootstrap/scss/_root";
+@import "~bootstrap/scss/_reboot";
+@import "~bootstrap/scss/_type";
+
+$bootstrap-icons-font-dir: "~bootstrap-icons/font/fonts";
+@import "~bootstrap-icons/font/bootstrap-icons";
+
+
+// merge with existing $theme-colors map
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "body-bg": $lightbackground,
+  "info": $info,
+  "pinkcake": $pinkcake,
+  "greecake": $greecake,
+  "veiscake": $veiscake,
+);
+
+// Create your own map
+$custom-colors: (
+  "lightbackground": $lightbackground
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+//borrar
+body {
+  background-color: $lightbackground !important;
+  color: $primary !important;
+}
+
+.content{
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-right: 4%;
+  margin-left: 4%;
+}
+
+.btn-rounded {
+  border-radius: 50px !important
+}
+
+.bg-pinkcake{
+  background-color: $pinkcake;
+}
+.bg-greecake{
+  background-color: $greecake;
+}
+.bg-veiscake{
+  background-color: $veiscake;
+}
+
+.text-gray{
+  color: gray;
+}
+
+.bg-secondary {
+  background-color: $secondary !important;
+}
+
+.bg-info {
+  background-color: $info !important;
+}
+
+.bg-info-dark {
+  background-color: $info-dark !important;
+}

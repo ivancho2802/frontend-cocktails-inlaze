@@ -29,6 +29,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## For the API use this endpoind https://www.thecocktaildb.com/
 
+## Para las solicitudes de la api paga 
+
+Use el id 11410 existente como data dummy y mostrar el producto mas popular en el home
+
 
 Do
     frontend
@@ -38,7 +42,7 @@ Do
         cocteles basados en ese ingrediente
     * mostrar cocteles segun la base inicial de su nombre
     backend
-    
+
 Doing
 
 Does
