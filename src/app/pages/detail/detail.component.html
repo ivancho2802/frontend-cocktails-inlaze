@@ -4,7 +4,9 @@
 
     <section id="Ingredientes" class="py-5">
 
-      <div class="grid">
+      <p *ngIf="!cocktailDetail?.strDrink">No hay datos</p>
+
+      <div class="grid" *ngIf="cocktailDetail?.strDrink">
         <div class="row">
           <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
             <h3>{{cocktailDetail?.strDrink}}</h3>
@@ -92,7 +94,6 @@
         </div>
 
       </div>
-
 
     </section>
 
