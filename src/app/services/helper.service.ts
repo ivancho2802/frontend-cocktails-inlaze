@@ -7,6 +7,12 @@ export class HelperService {
 
   constructor() { }
 
+  /**
+   * se separa en varios grupos un arreglo para ajustarlo al diseño que se va a mostrar
+   * @param array any
+   * @param n numero de tamaño del grupo
+   * @returns grupos varios
+   */
   split(array:any[], n:number) {
     try {
       let [...arr]  = array;
@@ -17,13 +23,20 @@ export class HelperService {
       return res;
       
     } catch (error) {
-      
+
       alert(JSON.stringify(error));
 
       return []
     }
   }
 
+  /**
+   * se separa en varios grupos un arreglo para ajustarlo al diseño que se va a mostrar
+   * @param a any
+   * @param n numero de grupos
+   * @param balanced de numeros iguales
+   * @returns grupos varios
+   */
   chunkify(a:any[], n: number, balanced:boolean) {
 
     if (n < 2)
