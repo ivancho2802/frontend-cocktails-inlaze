@@ -38,6 +38,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 body {
   background-color: $lightbackground !important;
   color: $primary !important;
+  overflow: scroll; 
 }
 
 .content{

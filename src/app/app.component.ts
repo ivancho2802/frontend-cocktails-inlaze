@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-root',
@@ -13,33 +14,16 @@ export class AppComponent {
   /**
   * validacion de errorres por mensaje
   */
-  async presentAlertOptions(tit: any, subtit: any, message: any, rutaAcept: any, rutaCancel: any, options: any) {
-    /* var titT = tit
-    var subtitT = subtit
-    var messageT = message
-
-    var buttonsDefault = [
-      {
-        text: 'Aceptar',
-        handler: () => {
-          if (options.url)
-            window.open(options.url, '_system', 'location=yes');
-
-        }
-      }
-    ];
-    var buttons = buttonsDefault//options.btn ? options.btn : buttonsDefault;
-    var backdropDismiss = options.backdropDismiss
+  async presentAlertOptions(title: any, subtit: any, message: any, rutaAcept: any, rutaCancel: any, options: any) {
     
-    const alert = await this.alertCtrl.create({
-      cssClass: 'barter-custom-class',
-      header: tit ? titT ? titT : tit : tit,
-      subHeader: subtit ? subtitT ? subtitT : subtit : subtit,
-      message: message ? messageT ? messageT : message : 'FAILED OPERATION',
-      buttons,
-      backdropDismiss: backdropDismiss
-    });
-    alert.present(); */
+    Swal.fire({
+      title: title,
+      text: message,
+      icon: options ? 'success' : 'error',
+      showCancelButton: true,
+      confirmButtonText: 'Si, lo hare.',
+      cancelButtonText: 'Cancelar',
+    })
   }
 
   async presentLoading(message: string, duration: number) {

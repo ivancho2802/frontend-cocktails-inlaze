@@ -59,7 +59,7 @@ export class DetailComponent implements OnInit {
           console.log("getDetailCocktailById - errorcocktaildetail", errorcocktaildetail);
           let msg = ''
 
-          this.appComponent.presentAlertOptions("Error", "obteniendo datos", msg, null, null, {});
+          this.appComponent.presentAlertOptions("Error", "obteniendo datos", msg, null, null, false);
         })
 
     }
@@ -98,7 +98,7 @@ export class DetailComponent implements OnInit {
       console.log("getDetailCocktailById - error", error);
       let msg = ''
 
-      this.appComponent.presentAlertOptions("Error", "validando datos", msg, null, null, {});
+      this.appComponent.presentAlertOptions("Error", "validando datos", msg, null, null, false);
     }
   }
 
@@ -142,7 +142,7 @@ export class DetailComponent implements OnInit {
       console.log("getDetailCocktailById - error", error);
       let msg = ''
 
-      this.appComponent.presentAlertOptions("Error", "validando datos", msg, null, null, {});
+      this.appComponent.presentAlertOptions("Error", "validando datos", msg, null, null, false);
     }
   }
 
@@ -182,7 +182,7 @@ export class DetailComponent implements OnInit {
       console.log("getDetailCocktailById - error", error);
       let msg = ''
 
-      this.appComponent.presentAlertOptions("Error", "validando datos", msg, null, null, {});
+      this.appComponent.presentAlertOptions("Error", "validando datos", msg, null, null, false);
       return []
     }
   }

@@ -80,7 +80,7 @@ export class HomeComponent implements OnInit {
           console.log("getMorePopuarCocktail - errorcocktailpopular", errorcocktailpopular);
           let msg = ''
     
-          this.appComponent.presentAlertOptions("Error", "obteniendo datos", msg, null, null, {});
+          this.appComponent.presentAlertOptions("Error", "obteniendo datos", msg, null, null, false);
         })
 
       }
@@ -90,7 +90,7 @@ export class HomeComponent implements OnInit {
       console.log("getMorePopuarCoctail - errorcoctailpopular", errorcoctailpopular);
       let msg = ''
 
-      this.appComponent.presentAlertOptions("Error", "obteniendo datos", msg, null, null, {});
+      this.appComponent.presentAlertOptions("Error", "obteniendo datos", msg, null, null, false);
     })
   }
 
@@ -134,7 +134,7 @@ export class HomeComponent implements OnInit {
       console.log("getMorePopuarCocktail - errorcategories", errorcategories);
       let msg = ''
 
-      this.appComponent.presentAlertOptions("Error", "obteniendo datos", msg, null, null, {});
+      this.appComponent.presentAlertOptions("Error", "obteniendo datos", msg, null, null, false);
     })
 
   }
@@ -165,7 +165,7 @@ export class HomeComponent implements OnInit {
       console.log("getMorePopuarCocktail - errorcategories", errorcategories);
       let msg = ''
 
-      this.appComponent.presentAlertOptions("Error", "obteniendo datos", msg, null, null, {});
+      this.appComponent.presentAlertOptions("Error", "obteniendo datos", msg, null, null, false);
     })
     
   }
@@ -197,7 +197,7 @@ export class HomeComponent implements OnInit {
       console.log("getDetailCocktailById - error", error);
       let msg = ''
 
-      this.appComponent.presentAlertOptions("Error", "validando datos", msg, null, null, {});
+      this.appComponent.presentAlertOptions("Error", "validando datos", msg, null, null, false);
     }
 
   }
