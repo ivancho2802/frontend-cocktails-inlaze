@@ -64,6 +64,15 @@ img.bright {
     transform: translate(-50%, -50%);
 }
 
+.content-img-cocktailpopular {
+    background-image: url('../../../assets/cocktails/Fruta-roja-centro.png'), url('../../../assets/cocktails/Palitos-cafe-centro.png');
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    background-position: center left, center right;
+}
+
 .bg-cocktailpopular{
     border-radius: 50%;
     width: 400px;
