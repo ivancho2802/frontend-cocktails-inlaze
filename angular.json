@@ -37,8 +37,11 @@
               "node_modules/sweetalert2/src/sweetalert2.scss"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.js"
-            ]
+              "node_modules/bootstrap/dist/js/bootstrap.js",
+              "node_modules/html2canvas/dist/html2canvas.min.js",
+              "node_modules/jspdf-autotable/dist/jspdf.plugin.autotable.js"
+            ],
+            "allowedCommonJsDependencies": ["jsdom"]
           },
           "configurations": {
             "production": {
