@@ -55,7 +55,10 @@ export class HomeComponent implements OnInit {
     this.filterByIngredient = this.activatedroute.snapshot.paramMap.get("i")
     this.filterByName = this.activatedroute.snapshot.paramMap.get("s")
     console.log(this.filterByName)
-    this.getCocktailsByAlcoholic();
+
+    setTimeout(() => { 
+      this.getCocktailsByAlcoholic();
+    }, 1000);
   }
 
   /**
@@ -113,15 +116,18 @@ export class HomeComponent implements OnInit {
    * get the cocktail alcoholic or filter
    * Observable @CockteilsDataModel
    */
-  getCocktailsByAlcoholic() {
+  async getCocktailsByAlcoholic() {
 
-    let allProds: any = dls.drinks
-
-
-    console.log("allProds", allProds);
-
+    let allProds: any = dls.drinks;
 
     this.cocktails = allProds;
+
+    allProds = await this.setImageDls(allProds);
+
+    this.cocktails = allProds;
+
+    console.log("allProds", this.cocktails);
+
     this.cocktailsGroups = this.helperService.split(this.cocktails, 12);
 
     this.cocktailsGroupsAux = this.cocktailsGroups;
@@ -272,7 +278,7 @@ export class HomeComponent implements OnInit {
       let heightLeft = imgHeight;
       let position = 0;
       heightLeft -= pageHeight;
-      const doc = new jsPDF('p', 'mm', 'letter');
+      const doc = new jsPDF('p', 'mm', [216, 279]);
       doc.addImage(canvas, 'PNG', 0, position, imgWidth, imgHeight, '', 'FAST');
       while (heightLeft >= 0) {
         position = heightLeft - imgHeight;
@@ -309,7 +315,7 @@ export class HomeComponent implements OnInit {
         let ctx: any = canvas.getContext("2d");
         ctx.drawImage(img, 0, 0);
 
-        let dataURL = await canvas.toDataURL("image/png");
+        let dataURL = canvas.toDataURL("image/png");
 
         resolve(dataURL);
       };
@@ -348,7 +354,7 @@ export class HomeComponent implements OnInit {
     reader.readAsBinaryString(img);
     reader.onload = (event: any) => result.next(btoa(event.target.result.toString()));
     return result; */
-    /* }*/
+    /* }*/ 
   }
 
   async setImageDls(allProds: any[]) {
@@ -357,14 +363,18 @@ export class HomeComponent implements OnInit {
 
     let allProdsFormat: any[] = [];
 
-    allProds.forEach(async (cocktail) => {
+    allProds.map(async (cocktail) => {
       if (cocktail?.id) {
-        cocktail.strDrinkThumb = await this.getBase64ImageFromUrl(urlimagedls + cocktail?.id)
+        cocktail.strDrinkThumb = await this.getBase64ImageFromUrl(urlimagedls + cocktail?.id).then();
       } else {
         cocktail.strDrinkThumb = cocktail.strDrinkThumb + '/preview';
+
       }
+      return cocktail
       allProdsFormat.push(cocktail);
     });
+
+    allProdsFormat = allProds;
 
     return allProdsFormat;
   }
