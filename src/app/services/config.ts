@@ -38,39 +38,18 @@ export const dls = {
     "length": 33,
     "drinks": [
         {
-            "id": 30,
+            "id": 89,
             "product_variant_count": 1,
             "currency_id": [
                 1,
                 "USD"
             ],
             "activity_state": false,
-            "write_date": "2023-08-29 03:26:57",
-            "strDrink": "Air/Water Syringe Tip Bag 250 Pcs",
+            "write_date": "2023-10-27 15:51:09",
+            "strDrink": "Cup of 5 oz. Case master x 2500 Pcs",
             "priority": "0",
             "default_code": false,
-            "list_price": 13.9,
-            "qty_available": 0,
-            "uom_id": [
-                1,
-                "Unidades"
-            ],
-            "type": "consu",
-            "show_on_hand_qty_status_button": false
-        },
-        {
-            "id": 5,
-            "product_variant_count": 1,
-            "currency_id": [
-                1,
-                "USD"
-            ],
-            "activity_state": false,
-            "write_date": "2023-08-18 22:13:05",
-            "strDrink": "Black Mask Box 50 Pcs",
-            "priority": "0",
-            "default_code": false,
-            "list_price": 2.5,
+            "list_price": 70,
             "qty_available": 100,
             "uom_id": [
                 1,
@@ -80,48 +59,6 @@ export const dls = {
             "show_on_hand_qty_status_button": true
         },
         {
-            "id": 17,
-            "product_variant_count": 5,
-            "currency_id": [
-                1,
-                "USD"
-            ],
-            "activity_state": false,
-            "write_date": "2023-08-29 03:30:37",
-            "strDrink": "Clear Vinilo Gloves box 100 pcs",
-            "priority": "0",
-            "default_code": false,
-            "list_price": 3,
-            "qty_available": 50000,
-            "uom_id": [
-                1,
-                "Unidades"
-            ],
-            "type": "product",
-            "show_on_hand_qty_status_button": true
-        },
-        {
-            "id": 40,
-            "product_variant_count": 1,
-            "currency_id": [
-                1,
-                "USD"
-            ],
-            "activity_state": false,
-            "write_date": "2023-08-29 16:27:39",
-            "strDrink": "Dental Bibs Polygard 2 Ply Paper + 1 Ply Poly top  Quality A Carton 500 pcs",
-            "priority": "0",
-            "default_code": false,
-            "list_price": 16.9,
-            "qty_available": 0,
-            "uom_id": [
-                1,
-                "Unidades"
-            ],
-            "type": "consu",
-            "show_on_hand_qty_status_button": false
-        },
-        {
             "id": 32,
             "product_variant_count": 1,
             "currency_id": [
@@ -129,7 +66,7 @@ export const dls = {
                 "USD"
             ],
             "activity_state": false,
-            "write_date": "2023-08-29 02:29:22",
+            "write_date": "2023-10-04 20:39:25",
             "strDrink": "Dental Cotton Rolls Box 2000 Pcs. 10mm x 38mm",
             "priority": "0",
             "default_code": false,
@@ -144,13 +81,13 @@ export const dls = {
         },
         {
             "id": 31,
-            "product_variant_count": 1,
+            "product_variant_count": 2,
             "currency_id": [
                 1,
                 "USD"
             ],
             "activity_state": false,
-            "write_date": "2023-08-29 02:31:09",
+            "write_date": "2023-10-14 15:36:42",
             "strDrink": "Dental Needle 27g 0.4 25mm  Box 100 Pcs",
             "priority": "0",
             "default_code": false,
@@ -165,13 +102,13 @@ export const dls = {
         },
         {
             "id": 55,
-            "product_variant_count": 1,
+            "product_variant_count": 2,
             "currency_id": [
                 1,
                 "USD"
             ],
             "activity_state": false,
-            "write_date": "2023-08-30 14:44:46",
+            "write_date": "2023-11-06 19:41:10",
             "strDrink": "Dental Tray cover  green and Blue Carton 1000 Pcs",
             "priority": "0",
             "default_code": false,
@@ -206,49 +143,6 @@ export const dls = {
             "show_on_hand_qty_status_button": false
         },
         {
-            "id": 60,
-            "product_variant_count": 1,
-            "currency_id": [
-                1,
-                "USD"
-            ],
-            "activity_state": false,
-            "write_date": "2023-09-12 02:05:39",
-            "strDrink": "Sterile gauze 4x4, 12ply, X-RAY, 2pc/pk, 50pk/bx, 20bx/ctn (2000u/cs) Pack 2 pcs",
-            "priority": "0",
-            "default_code": false,
-            "list_price": 0.19,
-            "qty_available": 0,
-            "uom_id": [
-                1,
-                "Unidades"
-            ],
-            "type": "product",
-            "show_on_hand_qty_status_button": true
-        },
-        
-        {
-            "id": 51,
-            "product_variant_count": 1,
-            "currency_id": [
-                1,
-                "USD"
-            ],
-            "activity_state": false,
-            "write_date": "2023-08-29 03:19:36",
-            "strDrink": "Non- Woven Sponge 30g  2a”x2” 4 Ply Steril Bag 200 Pcs",
-            "priority": "0",
-            "default_code": false,
-            "list_price": 1.2,
-            "qty_available": 0,
-            "uom_id": [
-                1,
-                "Unidades"
-            ],
-            "type": "consu",
-            "show_on_hand_qty_status_button": false
-        },
-        {
             "id": 37,
             "product_variant_count": 1,
             "currency_id": [
@@ -256,7 +150,7 @@ export const dls = {
                 "USD"
             ],
             "activity_state": false,
-            "write_date": "2023-08-29 02:32:54",
+            "write_date": "2023-09-22 18:34:22",
             "strDrink": "Evacuator Tips Non - Vented White bag 100 Pcs",
             "priority": "0",
             "default_code": false,
@@ -277,7 +171,7 @@ export const dls = {
                 "USD"
             ],
             "activity_state": false,
-            "write_date": "2023-08-29 02:33:21",
+            "write_date": "2023-09-22 18:35:12",
             "strDrink": "Evacuator Tips Vented White  100 Pcs bag",
             "priority": "0",
             "default_code": false,
@@ -289,69 +183,6 @@ export const dls = {
             ],
             "type": "consu",
             "show_on_hand_qty_status_button": false
-        },
-        {
-            "id": 47,
-            "product_variant_count": 1,
-            "currency_id": [
-                1,
-                "USD"
-            ],
-            "activity_state": false,
-            "write_date": "2023-08-29 03:41:44",
-            "strDrink": "Gation Needle Tips Dual Head Sterile 30g Yellow Box 100 Pcs",
-            "priority": "0",
-            "default_code": false,
-            "list_price": 33.75,
-            "qty_available": 0,
-            "uom_id": [
-                1,
-                "Unidades"
-            ],
-            "type": "consu",
-            "show_on_hand_qty_status_button": false
-        },
-        {
-            "id": 46,
-            "product_variant_count": 1,
-            "currency_id": [
-                1,
-                "USD"
-            ],
-            "activity_state": false,
-            "write_date": "2023-08-29 02:34:21",
-            "strDrink": "Irrigation Needle Tips Single Head Sterile 30g Yellow 25 mm Box 100 Pcs ",
-            "priority": "0",
-            "default_code": false,
-            "list_price": 23.9,
-            "qty_available": 0,
-            "uom_id": [
-                1,
-                "Unidades"
-            ],
-            "type": "consu",
-            "show_on_hand_qty_status_button": false
-        },
-        {
-            "id": 18,
-            "product_variant_count": 3,
-            "currency_id": [
-                1,
-                "USD"
-            ],
-            "activity_state": false,
-            "write_date": "2023-08-29 02:35:24",
-            "strDrink": "Latex Gloves 1 Box Contain 100 pcs",
-            "priority": "0",
-            "default_code": false,
-            "list_price": 6,
-            "qty_available": 300,
-            "uom_id": [
-                1,
-                "Unidades"
-            ],
-            "type": "product",
-            "show_on_hand_qty_status_button": true
         },
         {
             "id": 50,
@@ -382,7 +213,7 @@ export const dls = {
                 "USD"
             ],
             "activity_state": false,
-            "write_date": "2023-08-29 02:38:40",
+            "write_date": "2023-10-14 15:33:48",
             "strDrink": "Luer Lock Syringe  1.2 cc Clear Color  Non Sterile 100 Pcs Bag",
             "priority": "0",
             "default_code": false,
@@ -403,7 +234,7 @@ export const dls = {
                 "USD"
             ],
             "activity_state": false,
-            "write_date": "2023-08-29 02:37:25",
+            "write_date": "2023-10-04 21:17:20",
             "strDrink": "Luer Lock Syringe 3 cc Non Steril Color Clear  Bag 100 Pcs",
             "priority": "0",
             "default_code": false,
@@ -438,27 +269,6 @@ export const dls = {
             "show_on_hand_qty_status_button": false
         },
         {
-            "id": 57,
-            "product_variant_count": 1,
-            "currency_id": [
-                1,
-                "USD"
-            ],
-            "activity_state": false,
-            "write_date": "2023-08-29 19:27:45",
-            "strDrink": "Mask Box 50 Pcs",
-            "priority": "0",
-            "default_code": false,
-            "list_price": 2.5,
-            "qty_available": 0,
-            "uom_id": [
-                1,
-                "Unidades"
-            ],
-            "type": "product",
-            "show_on_hand_qty_status_button": true
-        },
-        {
             "id": 41,
             "product_variant_count": 4,
             "currency_id": [
@@ -466,7 +276,7 @@ export const dls = {
                 "USD"
             ],
             "activity_state": false,
-            "write_date": "2023-09-01 20:29:01",
+            "write_date": "2023-10-04 20:58:14",
             "strDrink": "Micro Applicator Regular 2 mm bottle 100 pcs",
             "priority": "0",
             "default_code": false,
@@ -487,12 +297,12 @@ export const dls = {
                 "USD"
             ],
             "activity_state": false,
-            "write_date": "2023-09-02 22:57:32",
+            "write_date": "2023-10-14 15:36:16",
             "strDrink": "Nitrilo Gloves box 100 pcs",
             "priority": "0",
             "default_code": false,
             "list_price": 5.5,
-            "qty_available": 199949,
+            "qty_available": 32000,
             "uom_id": [
                 1,
                 "Unidades"
@@ -508,7 +318,7 @@ export const dls = {
                 "USD"
             ],
             "activity_state": false,
-            "write_date": "2023-08-29 03:47:40",
+            "write_date": "2023-10-08 01:17:23",
             "strDrink": "Nitrilo gloves Blue Box 100 Pcs",
             "priority": "0",
             "default_code": false,
@@ -522,18 +332,18 @@ export const dls = {
             "show_on_hand_qty_status_button": true
         },
         {
-            "id": 7,
+            "id": 51,
             "product_variant_count": 1,
             "currency_id": [
                 1,
                 "USD"
             ],
             "activity_state": false,
-            "write_date": "2023-08-29 03:41:57",
-            "strDrink": "Paper towerl Box 4008 Pcs",
+            "write_date": "2023-08-29 03:19:36",
+            "strDrink": "Non- Woven Sponge 30g  2a”x2” 4 Ply Steril Bag 200 Pcs",
             "priority": "0",
             "default_code": false,
-            "list_price": 42,
+            "list_price": 1.2,
             "qty_available": 0,
             "uom_id": [
                 1,
@@ -565,13 +375,13 @@ export const dls = {
         },
         {
             "id": 25,
-            "product_variant_count": 4,
+            "product_variant_count": 12,
             "currency_id": [
                 1,
                 "USD"
             ],
             "activity_state": false,
-            "write_date": "2023-08-29 03:25:14",
+            "write_date": "2023-10-03 19:23:03",
             "strDrink": "Saliva Ejector Bag 100 Pcs",
             "priority": "0",
             "default_code": false,
@@ -613,7 +423,7 @@ export const dls = {
                 "USD"
             ],
             "activity_state": false,
-            "write_date": "2023-09-08 19:34:08",
+            "write_date": "2023-10-04 21:29:19",
             "strDrink": "Self sealing Sterilization Pouch  3.5 x 9 iches 60 g paper 200 Pcs Box",
             "priority": "0",
             "default_code": false,
@@ -655,7 +465,7 @@ export const dls = {
                 "USD"
             ],
             "activity_state": false,
-            "write_date": "2023-08-28 18:46:09",
+            "write_date": "2023-10-04 21:09:17",
             "strDrink": "Surgical Aspirator Preci Blue bag 25 Pcs",
             "priority": "0",
             "default_code": false,
@@ -676,7 +486,7 @@ export const dls = {
                 "USD"
             ],
             "activity_state": false,
-            "write_date": "2023-08-28 18:47:27",
+            "write_date": "2023-10-04 21:16:48",
             "strDrink": "Surgical Aspirator Tips Color White box 25 pcs",
             "priority": "0",
             "default_code": false,
@@ -690,67 +500,46 @@ export const dls = {
             "show_on_hand_qty_status_button": false
         },
         {
-            "id": 3,
+            "id": 85,
             "product_variant_count": 1,
             "currency_id": [
                 1,
                 "USD"
             ],
             "activity_state": false,
-            "write_date": "2023-09-11 17:08:14",
-            "strDrink": "Surgical Gowns 80 Pcs",
+            "write_date": "2023-09-26 02:23:21",
+            "strDrink": "Syringe 5 CC 21G x 1 1/2\" w/ Needle Box of 100",
             "priority": "0",
             "default_code": false,
-            "list_price": 1.7,
-            "qty_available": 100,
+            "list_price": 9.5,
+            "qty_available": 0,
             "uom_id": [
                 1,
                 "Unidades"
             ],
-            "type": "product",
-            "show_on_hand_qty_status_button": true
+            "type": "consu",
+            "show_on_hand_qty_status_button": false
         },
         {
-            "id": 4,
+            "id": 86,
             "product_variant_count": 1,
             "currency_id": [
                 1,
                 "USD"
             ],
             "activity_state": false,
-            "write_date": "2023-08-18 22:13:05",
-            "strDrink": "Surgical Shirt and Pants Kit",
+            "write_date": "2023-09-26 02:30:42",
+            "strDrink": "Syringe 5 CC w/o Needle Box of 100",
             "priority": "0",
             "default_code": false,
-            "list_price": 1.4,
-            "qty_available": 100,
+            "list_price": 7,
+            "qty_available": 0,
             "uom_id": [
                 1,
                 "Unidades"
             ],
-            "type": "product",
-            "show_on_hand_qty_status_button": true
-        },
-        {
-            "id": 9,
-            "product_variant_count": 1,
-            "currency_id": [
-                1,
-                "USD"
-            ],
-            "activity_state": false,
-            "write_date": "2023-08-29 03:40:40",
-            "strDrink": "Wipes Laysol Bottle",
-            "priority": "0",
-            "default_code": false,
-            "list_price": 3.6,
-            "qty_available": 100000,
-            "uom_id": [
-                1,
-                "Unidades"
-            ],
-            "type": "product",
-            "show_on_hand_qty_status_button": true
+            "type": "consu",
+            "show_on_hand_qty_status_button": false
         }
     ]
 }

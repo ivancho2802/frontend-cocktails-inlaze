@@ -129,17 +129,17 @@
     <div class="grid p-5" id="cocktails_">
 
       <div class="row">
-        <div class="col-auto">
-          <img src="http://localhost:4200/assets/cocktails/Logo.png" width="200" alt="Dls"/>
+        <div class="col text-center">
+          <img src="http://localhost:4200/assets/cocktails/lucky.jpeg" width="500" alt="Dls"/>
         </div>
-        <div class="col-auto text-start float-right">
+        <!-- <div class="col-auto text-start float-right">
           <p>
-            Dls Medical Usa <br>
+            LUCKY HEAP <br>
               9806 NW 80th Avenue Bay 12 H, Hialeah Gardens, FL <br>
               33016, Estados Unidos <br>
               Florida FL 33222 <br>
           </p>
-        </div>
+        </div> -->
         <hr>
       </div>
     
@@ -160,36 +160,28 @@
                 -->
                   <img 
                   [src]="cocktail.strDrinkThumb"
-                  [alt]="cocktail.strDrink" width="100" height="100" />
+                  [alt]="cocktail.strDrink" width="200" height="200" />
                 </div>
                 <div class="p-2 bd-highlight"></div>
               </div>
-              <span class="mx-5">{{cocktail.strDrink}}</span>
-              <a [href]="'https://dlsmedicalusa.odoo.com/shop/' + fixLink(cocktail.strDrink)" class="nav-item">
-                <p class="text-light">
-                  <!-- Add to my list -->{{ cocktail.list_price | currency : 'USD'}} 
-                  <!-- <span class="text-light">+</span> -->
-                </p>
-              </a>
+              <p class="px-2 mx-5 text-center">{{cocktail.strDrink}}</p>
+
+              <!-- [href]="'https://dlsmedicalusa.odoo.com/shop/' + fixLink(cocktail.strDrink)"  -->
+              <div class="justify-content-center text-center input-group  rounded text-dark">
+                <span  [class]="
+                ((j == 0 || j == 3 || j == 6) ? 'bg-pinkcake': (
+                  (j == 1 || j == 4 || j == 7 ? 'bg-greecake': 'bg-veiscake')
+                )) + ' input-group-text text-dark'">Price</span>
+
+                <span class="input-group-text">
+                    <!-- Add to my list class="text-light"-->{{ cocktail.list_price | currency : 'USD'}} 
+                    <!-- <span class="text-light">+</span> -->
+                </span>
+              </div>
 
             </div>
           </div>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
         <br>
         <br>
         <br>

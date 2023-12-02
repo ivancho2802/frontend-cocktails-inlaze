@@ -122,13 +122,15 @@ export class HomeComponent implements OnInit {
 
     this.cocktails = allProds;
 
+    //allProds = await this.setImageDiscount(allProds);
+
     allProds = await this.setImageDls(allProds);
 
     this.cocktails = allProds;
 
     console.log("allProds", this.cocktails);
 
-    this.cocktailsGroups = this.helperService.split(this.cocktails, 12);
+    this.cocktailsGroups = this.helperService.split(this.cocktails, 9);
 
     this.cocktailsGroupsAux = this.cocktailsGroups;
 
@@ -388,6 +390,28 @@ export class HomeComponent implements OnInit {
     });
 
     this.nameImagesBackgrgound = arrayCustom
+  }
+
+  setImageDiscount(allProds: any){
+    let allProdsDiscount:any[] = []
+    allProds.forEach((element:any) => {
+
+      if(element.strDrink.toLowerCase().includes("bibs")){
+        element.list_price = element.list_price - (element.list_price * 0.20);
+        //element.strDrink += element.strDrink + " " + "(-20%)"; 
+      } else if(element.strDrink.toLowerCase().includes("film")){
+        element.list_price = element.list_price - (element.list_price * 0.15);
+        //element.strDrink += element.strDrink + " " + "(-15%)"; 
+      } else {
+        element.list_price = element.list_price - (element.list_price * 0.30);
+        //element.strDrink += element.strDrink + " " + "(-30%)"; 
+      }
+      
+
+      allProdsDiscount.push(element);
+    });
+
+    return allProdsDiscount;
   }
 
 }

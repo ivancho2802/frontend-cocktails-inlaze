@@ -1,8 +1,8 @@
 @import "../../../theme/variables.scss";
 
 .inlaze-item {
-    width: 110px;
-    height: 110px;
+    width: 210px;
+    height: 210px;
     border-radius: 50%;
 
     img {
@@ -13,7 +13,7 @@
 
 .bg-image-primary {
     background-color: $primary;
-    border-radius: 48% 50px 50px 50px;
+    border-radius: 40% 50px 50px 50px;
     color: $lightbackground;
 }
 
